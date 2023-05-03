@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useRouter } from 'next/router';
 import Page from '@/components/backbutton';
+import IncrementInput from '@/components/Series';
 
+interface Exercise {
+  name: string;
+  checked: boolean;
+}
+
+const exercises: Exercise[] = [
+  { name: "Exercise 1", checked: false },
+  { name: "Exercise 2", checked: true },
+  { name: "Exercise 3", checked: false },
+];
 
 export default function Selected() {
   const router = useRouter();
+  const [exerciseList, setExerciseList] = useState(exercises);
+
+
 
   // transforma exercícios selecionados em array
   const selectedExercises = router.query.selectedExercises;
@@ -27,3 +41,4 @@ export default function Selected() {
     
   );
 };
+

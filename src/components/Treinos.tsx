@@ -4,7 +4,7 @@ export default function Treinos() {
     return (
       <div>
         <h2 className={`
-        flex mb-2 m-5 rounded-md p-2 justify-center text-center text-5xl text-gray-200 font-bold bg-gray-500 gap-2
+        flex mb-2 m-5 rounded-md p-2 justify-center text-center text-5xl text-gray-200 font-bold bg-gray-900 gap-2
         `}>Rotina de treino</h2>
         
         <nav>
