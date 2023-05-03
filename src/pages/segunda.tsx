@@ -69,6 +69,8 @@ const Monday = () => {
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="smith">Agachamento Smith</label>
+                  <IncrementInput/>
+
                 </div>
                 
                 <div className={`
@@ -85,6 +87,7 @@ const Monday = () => {
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="avançohalter">Avanço com halteres</label>
+                  <IncrementInput/>
                 </div> 
 
                 <div className={`
@@ -92,7 +95,7 @@ const Monday = () => {
                     text-2xl hover:scale-110 
                   `}>
                     <input 
-                        id='Leg 80º' 
+                        id='leg80' 
                         type="checkbox" 
                         className={` 
                         bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black 
@@ -101,6 +104,7 @@ const Monday = () => {
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="leg80">Leg 80º</label>
+                  <IncrementInput/>
                 </div>
 
                 <div className={`
@@ -115,6 +119,7 @@ const Monday = () => {
                         `} 
                     value="Agachamento Livre" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold' htmlFor="squat">Agachamento Livre</label>
+                  <IncrementInput/>
                 </div>
                 
                 <div className={`
@@ -129,6 +134,7 @@ const Monday = () => {
                         `} 
                     value="Cadeira Flexora" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold' htmlFor="cadeiraf">Cadeira Flexora</label>
+                  <IncrementInput/>
                 </div>
                 
                 <div className={`
@@ -143,6 +149,7 @@ const Monday = () => {
                         `} 
                     value="Hack" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold' htmlFor="hack">Hack</label>
+                  <IncrementInput/>
                 </div>
             </div>
 
@@ -152,7 +159,6 @@ const Monday = () => {
             </div>
       </form>
       <Page/>
-
     </div>
   )
 }
