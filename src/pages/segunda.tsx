@@ -70,7 +70,6 @@ const Monday = () => {
                         /> 
                     <label className='text-black font-semibold ' htmlFor="smith">Agachamento Smith</label>
                   <IncrementInput/>
-
                 </div>
                 
                 <div className={`
