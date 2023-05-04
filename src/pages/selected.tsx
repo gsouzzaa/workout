@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Page from '@/components/backbutton';
-import IncrementInput from '@/components/Series';
 
 export default function Selected() {
   const router = useRouter();
@@ -13,7 +12,7 @@ export default function Selected() {
   // renderiza exercícios
   return (
     <div className={`
-    p-20 m-20 flex flex-col gap-2
+    p-5 m-5 flex flex-col gap-2
     `}>
       
       <h1 className=' w-auto m-2 flex text-justify justify-center text-3xl font-bold rounded-md border overflow-hidden p-1'>Quadríceps</h1>
