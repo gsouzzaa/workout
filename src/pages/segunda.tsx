@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Page from '@/components/backbutton'
-import IncrementInput from '@/components/Series'
+import SeriesNumber from '@/components/Series'
 
 const Monday = () => {
   const router = useRouter()
@@ -18,12 +18,17 @@ const Monday = () => {
     }
   }
 
+  const [numberValue, setNumberValue] = useState(0);
+  const handleNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNumberValue(Number(event.target.value));
+  };
+
   //envio do formulário
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    router.push(`/selected?selectedExercises=${selectedExercises.join(',')}`)
+    router.push(`/selected?selectedExercises=${selectedExercises.join(',')}&numberValue=${numberValue}`)
   }
-
+    
   //renderiza página
   return (
     <div className={`
@@ -40,7 +45,7 @@ const Monday = () => {
             <div className='flex flex-wrap'>
                 <div className={` 
                     w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                    text-2xl hover:scale-110 
+                    text-2xl 
                   `}>
                     <input
                         id='leg' 
@@ -52,12 +57,11 @@ const Monday = () => {
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="leg">Leg Press</label>
-                  <IncrementInput/>
                 </div>
 
                 <div className={`
                     w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                    text-2xl hover:scale-110 
+                    text-2xl 
                   `}>
                     <input 
                         id='smith' 
@@ -69,12 +73,11 @@ const Monday = () => {
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="smith">Agachamento Smith</label>
-                  <IncrementInput/>
                 </div>
                 
                 <div className={`
                     w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                    text-2xl hover:scale-110 
+                    text-2xl 
                   `}>
                     <input 
                         id='avançohalter' 
@@ -86,12 +89,11 @@ const Monday = () => {
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="avançohalter">Avanço com halteres</label>
-                  <IncrementInput/>
                 </div> 
 
                 <div className={`
                     w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                    text-2xl hover:scale-110 
+                    text-2xl  
                   `}>
                     <input 
                         id='leg80' 
@@ -103,12 +105,11 @@ const Monday = () => {
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="leg80">Leg 80º</label>
-                  <IncrementInput/>
                 </div>
 
                 <div className={`
                   w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                  text-2xl hover:scale-110  
+                  text-2xl   
                 `}>
                     <input 
                     id='squat' 
@@ -118,12 +119,11 @@ const Monday = () => {
                         `} 
                     value="Agachamento Livre" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold' htmlFor="squat">Agachamento Livre</label>
-                  <IncrementInput/>
                 </div>
                 
                 <div className={`
                    w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                   text-2xl hover:scale-110 
+                   text-2xl  
                 `}>
                     <input 
                     id='cadeiraf' 
@@ -133,12 +133,11 @@ const Monday = () => {
                         `} 
                     value="Cadeira Flexora" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold' htmlFor="cadeiraf">Cadeira Flexora</label>
-                  <IncrementInput/>
                 </div>
                 
                 <div className={`
                   w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                  text-2xl hover:scale-110
+                  text-2xl
                 `}>
                     <input 
                     id='hack' 
@@ -148,7 +147,6 @@ const Monday = () => {
                         `} 
                     value="Hack" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold' htmlFor="hack">Hack</label>
-                  <IncrementInput/>
                 </div>
             </div>
 

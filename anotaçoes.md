@@ -1,44 +1,45 @@
-import React, {useState} from 'react';
-import { useRouter } from 'next/router';
-import Page from '@/components/backbutton';
-import IncrementInput from '@/components/Series';
+import { useState } from 'react';
 
-interface Exercise {
-  name: string;
-  checked: boolean;
-}
+export default function IncrementInput() {
+  const [value, setValue] = useState(0);
 
-const exercises: Exercise[] = [
-  { name: "Exercise 1", checked: false },
-  { name: "Exercise 2", checked: true },
-  { name: "Exercise 3", checked: false },
-];
+  function handleIncrement(): void {
+    if (value <10) {
+        setValue(value + 1);
+    }
+    console.log(handleIncrement, setValue);
 
-export default function Selected() {
-  const router = useRouter();
-  const [exerciseList, setExerciseList] = useState(exercises);
+  }
 
+  function handleDecrement() {
+    if (value > 0) {
+        setValue(value - 1);
+    }   
+  }
 
-
-  // transforma exercícios selecionados em array
-  const selectedExercises = router.query.selectedExercises;
-  const exercisesArray = typeof selectedExercises === 'string' ? selectedExercises.split(',') : [];
-
-  // renderiza exercícios
   return (
-    <div className={`
-        p-20 m-20 flex flex-col gap-2
-    `}>
-      <h1 className='text-xl justify-self text-center'>Quadríceps</h1>
-      <ul className='text-xl'>
-        {exercisesArray.map(exercise => (
-          <li key={exercise}>{exercise}</li>
-        ))}
-      </ul>
-      <Page/>
+    <div className="flex items-center space-x-2">
+      <button
+        type="button"
+        className=" text-black font-bold px-2 py-1  hover:bg-gray-300 rounded"
+        onClick={handleDecrement}
+      >
+        -
+      </button>
+      <input
+        type="text"
+        className=" text-black font-semibold border border-gray-300 rounded w-10 text-center"
+        value={value}
+        onChange={(event) => setValue(parseInt(event.target.value)|| 0)
+        }
+      />
+      <button
+        type="button"
+        className="text-black font-bold px-2 py-1 hover:bg-gray-300 rounded"
+        onClick={handleIncrement}
+      >
+        +
+      </button>
     </div>
-
-    
   );
-};
-
+}

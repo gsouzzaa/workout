@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Page from '@/components/backbutton'
-
-export default function Tuesday() {
+import CheckboxWithModal from '@/components/CheckboxwithModal'
+const Monday = () => {
   const router = useRouter()
 
   //armazena exercícios
@@ -17,41 +18,39 @@ export default function Tuesday() {
     }
   }
 
+  const [numberValue, setNumberValue] = useState(0);
+  const handleNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNumberValue(Number(event.target.value));
+  };
+
   //envio do formulário
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    router.push(`/selected?selectedExercises=${selectedExercises.join(',')}`)
+    router.push(`/selected?selectedExercises=${selectedExercises.join(',')}&numberValue=${numberValue}`)
   }
-
+    
   //renderiza página
   return (
-    <div className={`
-        justify-self text-center pt-10
-    `} >
-      <h1 className='text-xl justify-self text-center'>Quadríceps</h1>
-      <form onSubmit={handleSubmit}>
-        <h2>Selecione os exercícios:</h2>
-            <div className={`
-                flex flex-col text-xl gap-2  p-2 m-2 justify-content items-center border rounded-xl bg-slate-800
-            `}>
-                <input id='leg' type="checkbox" value="Leg Press" onChange={handleExerciseSelection}/> 
-                <label htmlFor="leg">Leg Press</label> 
 
-                <input id='squat' type="checkbox" value="Agachamento" onChange={handleExerciseSelection}/> 
-                <label htmlFor="squat">Agachamento</label> 
-                
-                <input id='cadeiraf' type="checkbox" value="Cadeira Flexora" onChange={handleExerciseSelection}/> 
-                <label htmlFor="cadeiraf">Cadeira Flexora</label> 
-                
-                <input id='hack' type="checkbox" value="Hack" onChange={handleExerciseSelection}/> 
-                <label htmlFor="hack">Hack</label>
+    <div className={`
+              justify-self text-center pt-10
+            `} >
+              <h1 className={`
+                text-5xl font-bold justify-self text-center mb-2
+              `}>Quadríceps</h1>
+
+            <div className='w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
+            text-2xl text-black '>
+              <h1 >Cadeira Extensora</h1>
+              <CheckboxWithModal />
+              <CheckboxWithModal />
+              <CheckboxWithModal />
+              <CheckboxWithModal />
             </div>
-            <div className='position fixed top-0 left-0 m-3' >
-                <Page/>
-            </div>
-            
-        <button className='flex gap-2 mt-2' type="submit">Continuar</button>
-      </form>
+
+              <Page/>
     </div>
   )
 }
+
+export default Monday

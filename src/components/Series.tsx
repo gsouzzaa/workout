@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-export default function IncrementInput() {
+export default function SeriesNumber() {
   const [value, setValue] = useState(0);
 
   function handleIncrement(): void {
     if (value <10) {
         setValue(value + 1);
     }
+    console.log(handleIncrement, setValue);
+
   }
 
   function handleDecrement() {
@@ -28,7 +30,7 @@ export default function IncrementInput() {
         type="text"
         className=" text-black font-semibold border border-gray-300 rounded w-10 text-center"
         value={value}
-        onChange={(event) => setValue(parseInt(event.target.value)|| 0)
+        onChange={(event) => setValue(parseInt(event.target.value) || 0)
         }
       />
       <button
