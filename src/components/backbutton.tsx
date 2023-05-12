@@ -6,7 +6,7 @@ const Page = () => {
 
   return (
     <div className={`
-      position fixed left-1 top-1 font-medium text-gray-200
+      position fixed left-1 top-1 font-medium text-xl text-gray-200
     `}>
       <button onClick={() => router.back()}>Voltar</button>
     </div>
