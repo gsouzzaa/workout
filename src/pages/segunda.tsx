@@ -56,12 +56,12 @@ const Monday = () => {
                         value="Leg Press" 
                         onChange={handleExerciseSelection}
                         /> 
-                    <label className='text-black font-semibold ' htmlFor="leg">Leg Press</label>
+                    <label className='text-black font-semibold' htmlFor="leg">Leg Press</label>
                 </div>
 
                 <div className={`
                     w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                    text-2xl 
+                    text-2xl
                   `}>
                     <input 
                         id='smith' 
@@ -72,7 +72,7 @@ const Monday = () => {
                         value="Agachamento Smith" 
                         onChange={handleExerciseSelection}
                         /> 
-                    <label className='text-black font-semibold ' htmlFor="smith">Agachamento Smith</label>
+                    <label className='text-black font-semibold  ' htmlFor="smith">Agachamento Smith</label>
                 </div>
                 
                 <div className={`
