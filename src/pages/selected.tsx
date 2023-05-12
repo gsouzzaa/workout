@@ -24,7 +24,7 @@ export default function Selected() {
         <li key={exercise} className={`
         exercise-${1} mb-3 text-xl justify-self text-center 
         `}>
-          <div className='display flex gap-8 m-3 p-5 ml-3 justify-center items-center font-bold border-b-2 border-b-zinc-500 text-2xl w-screen'>
+          <div className='display flex gap-8 m-3 p-5 justify-center items-center font-bold border-b-2 border-b-zinc-500 text-2xl w-screen'>
             {exercise}
             <CheckboxWithModal />
             <CheckboxWithModal />
