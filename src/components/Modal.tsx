@@ -21,9 +21,9 @@ const Modal = ({ onClose }: ModalProps) => {
   }, [countdown]);
 
   return (
-    <div>
+    <div className='flex flex-col gap-1 text-center'>
       {countdown}
-      <button className='text-xs' onClick={onClose}>❌</button>
+      <button onClick={onClose}>❌</button>
     </div>
   );
 };
