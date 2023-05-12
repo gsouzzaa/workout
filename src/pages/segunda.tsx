@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Page from '@/components/backbutton'
-import SeriesNumber from '@/components/Series'
 
 const Monday = () => {
   const router = useRouter()
@@ -69,7 +68,7 @@ const Monday = () => {
                         className={` 
                         bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black 
                         `} 
-                        value="Agachamento Smith" 
+                        value="Agach. Smith" 
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold  ' htmlFor="smith">Agachamento Smith</label>
@@ -101,7 +100,7 @@ const Monday = () => {
                         className={` 
                         bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black 
                         `} 
-                        value="Leg 80º" 
+                        value="Leg Press 80º" 
                         onChange={handleExerciseSelection}
                         /> 
                     <label className='text-black font-semibold ' htmlFor="leg80">Leg 80º</label>
@@ -117,7 +116,7 @@ const Monday = () => {
                     className={` 
                     bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black
                         `} 
-                    value="Agachamento Livre" onChange={handleExerciseSelection}/> 
+                    value="Agach. Livre" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold' htmlFor="squat">Agachamento Livre</label>
                 </div>
                 
