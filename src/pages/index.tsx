@@ -6,7 +6,6 @@ export default function IndexPage (){
     <div>
       <nav>
         <div><Treinos /></div>
-        <div><Dieta /></div>
       </nav>
     </div>
   )

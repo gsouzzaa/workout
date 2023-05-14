@@ -26,11 +26,11 @@ export default function Tuesday() {
   //renderiza página
   return (
     <div className={`
-        justify-self text-center pt-10
+      justify-self text-center pt-10
     `} >
       <h1 className={`
         text-5xl font-bold justify-self text-center mb-2
-      `}>Costas</h1>
+      `}>Peito</h1>
 
       <form onSubmit={handleSubmit}>
         <h2 className={`
@@ -42,31 +42,15 @@ export default function Tuesday() {
                     text-2xl 
                   `}>
                     <input
-                        id='pulleyt' 
+                        id='supinoreto' 
                         type="checkbox" 
                         className={` 
                         bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black 
                         `} 
-                        value="Pulley Triângulo" 
+                        value="Supino Reto" 
                         onChange={handleExerciseSelection}
                         /> 
-                    <label className='text-black font-semibold select-none' htmlFor="pulleyt">Pulley Triângulo</label>
-                </div>
-
-                <div className={`
-                    w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
-                    text-2xl
-                  `}>
-                    <input 
-                        id='Cavalinho' 
-                        type="checkbox" 
-                        className={` 
-                        bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black 
-                        `} 
-                        value="Cavalinho" 
-                        onChange={handleExerciseSelection}
-                        /> 
-                    <label className='text-black font-semibold select-none' htmlFor="Cavalinho">Remada Cavalinho</label>
+                    <label className='text-black font-semibold select-none' htmlFor="supinoreto">Supino Reto</label>
                 </div>
                 
                 <div className={`
@@ -74,15 +58,15 @@ export default function Tuesday() {
                     text-2xl 
                   `}>
                     <input 
-                        id='remadatri' 
+                        id='supinoinclinado' 
                         type="checkbox" 
                         className={` 
                         bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black 
                         `} 
-                        value="Remada Triângulo"
+                        value="Supino Inclinado"
                         onChange={handleExerciseSelection}
                         /> 
-                    <label className='text-black font-semibold select-none' htmlFor="remadatri">Remada Baixa Triângulo</label>
+                    <label className='text-black font-semibold select-none' htmlFor="supinoinclinado">Supino Inclinado</label>
                 </div> 
 
                 <div className={`
@@ -90,15 +74,15 @@ export default function Tuesday() {
                     text-2xl  
                   `}>
                     <input 
-                        id='remadacurvada' 
+                        id='supinoinclinadodb' 
                         type="checkbox" 
                         className={` 
                         bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black 
                         `} 
-                        value="Remada Curvada" 
+                        value="Supino Inclinado DB" 
                         onChange={handleExerciseSelection}
                         /> 
-                    <label className='text-black font-semibold select-none' htmlFor="remadacurvada">Remada Curvada</label>
+                    <label className='text-black font-semibold select-none' htmlFor="supinoinclinadodb">Supino Inclinado DB</label>
                 </div>
 
                 <div className={`
@@ -106,13 +90,13 @@ export default function Tuesday() {
                   text-2xl   
                 `}>
                     <input 
-                    id='Serrote' 
+                    id='crucifixomaquina' 
                     type="checkbox"
                     className={` 
                     bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black
                         `} 
-                    value="Serrote" onChange={handleExerciseSelection}/> 
-                    <label className='text-black font-semibold select-none' htmlFor="Serrote">Serrote</label>
+                    value="Crucifixo Máquina" onChange={handleExerciseSelection}/> 
+                    <label className='text-black font-semibold select-none' htmlFor="crucifixomaquina">Crucifixo Máquina</label>
                 </div>
                 
                 <div className={`
@@ -120,13 +104,13 @@ export default function Tuesday() {
                    text-2xl  
                 `}>
                     <input 
-                    id='pulleyfrente' 
+                    id='crossover' 
                     type="checkbox"
                     className={` 
                     bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black
                         `} 
-                    value="Pulley Frente" onChange={handleExerciseSelection}/> 
-                    <label className='text-black font-semibold select-none' htmlFor="pulleyfrente">Pulley Frente</label>
+                    value="Cross Over" onChange={handleExerciseSelection}/> 
+                    <label className='text-black font-semibold select-none' htmlFor="crossover">Cross Over</label>
                 </div>
                 
                 <div className={`
@@ -134,13 +118,13 @@ export default function Tuesday() {
                   text-2xl
                 `}>
                     <input 
-                    id='crucifixoI' 
+                    id='elevacaobarra' 
                     type="checkbox"
                     className={` 
                     bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black
                         `} 
-                    value="Crucifixo Inverso" onChange={handleExerciseSelection}/> 
-                    <label className='text-black font-semibold select-none' htmlFor="crucifixoI">Crucifixo Inverso</label>
+                    value="Elev. Frontal Barra" onChange={handleExerciseSelection}/> 
+                    <label className='text-black font-semibold select-none' htmlFor="elevacaobarra">Elev. Frontal Barra</label>
                 </div>
 
                 <div className={`
@@ -155,6 +139,34 @@ export default function Tuesday() {
                         `} 
                     value="Posterior X Cross" onChange={handleExerciseSelection}/> 
                     <label className='text-black font-semibold select-none' htmlFor="posteriorxcross">Posterior X Cross</label>
+                </div>
+
+                <div className={`
+                  w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
+                  text-2xl
+                `}>
+                    <input 
+                    id='elevacaodb' 
+                    type="checkbox"
+                    className={` 
+                    bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black
+                        `} 
+                    value="Elev. Frontal DB" onChange={handleExerciseSelection}/> 
+                    <label className='text-black font-semibold select-none' htmlFor="elevacaodb">Elev. Frontal DB</label>
+                </div>
+
+                <div className={`
+                   w-fit m-5 border rounded-md bg-gray-300 hover:bg-gray-400 px-2 py-2 flex items-center gap-4
+                   text-2xl  
+                `}>
+                    <input 
+                    id='arnoldpress' 
+                    type="checkbox"
+                    className={` 
+                    bg-white  flex flex-row w-5 h-5 border rounded-sm appearance-none border-black checked:bg-black checked:border-black
+                        `} 
+                    value="Arnold Press" onChange={handleExerciseSelection}/> 
+                    <label className='text-black font-semibold select-none' htmlFor="arnoldpress">Arnold Press</label>
                 </div>
 
             </div>

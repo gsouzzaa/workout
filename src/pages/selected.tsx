@@ -16,9 +16,11 @@ export default function Selected() {
   // renderiza exercícios
   return (
     <div className={`
-    p-2 m-2 flex flex-col gap-2
+    p-2 m-2 flex flex-col gap-2 w-screen
     `}>
-      <h1 className='mx-auto w-96 p-8 text-red-500 text-8xl font-bold flex flex-row justify-center text-center border-b-2 border-red-800'>Exercícios</h1>
+      <div className='w-screen ml-10 flex'>
+        <h1 className='p-8 text-red-500 text-8xl font-bold border-b-2 border-red-800'>Exercícios</h1>
+      </div>
       <ul>
       {exercisesArray.map((exercise) => (
         <li key={exercise} className={`
