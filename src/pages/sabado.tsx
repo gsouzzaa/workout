@@ -30,7 +30,7 @@ export default function Saturday() {
     `} >
       <h1 className={`
         text-5xl font-bold justify-self text-center mb-2
-      `}>Peito</h1>
+      `}>Posterior Coxa</h1>
 
       <form onSubmit={handleSubmit}>
         <h2 className={`
